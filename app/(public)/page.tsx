@@ -19,23 +19,25 @@ export const getBioQuery = groq`
 `;
 
 export default async function HomePage() {
-	if (previewData()) {
-		return (
-			// <PreviewSuspense
-			// 	callback={
-			// 		<div role="status">
-			// 			<p>loading preview data...</p>
-			// 		</div>
-			// 	}
-			// ></PreviewSuspense>
-			<></>
-		);
-	}
-
 	const projects = await client.fetch(getAllProjectsQuery);
 	const bio = await client.fetch(getBioQuery);
 
-	console.log(bio[0]);
+	if (previewData()) {
+		return (
+			<PreviewSuspense
+				fallback={
+					<div role="status">
+						<p>loading preview data...</p>
+					</div>
+				}
+			>
+				<div className="flex flex-col gap-6">
+					<Bio data={bio[0]} />
+					<Projects projects={projects} />
+				</div>
+			</PreviewSuspense>
+		);
+	}
 
 	return (
 		<div className="flex flex-col gap-6">
