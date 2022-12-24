@@ -21,13 +21,14 @@ export const getBioQuery = groq`
 export default async function HomePage() {
 	if (previewData()) {
 		return (
-			<PreviewSuspense
-				callback={
-					<div role="status">
-						<p>loading preview data...</p>
-					</div>
-				}
-			></PreviewSuspense>
+			// <PreviewSuspense
+			// 	callback={
+			// 		<div role="status">
+			// 			<p>loading preview data...</p>
+			// 		</div>
+			// 	}
+			// ></PreviewSuspense>
+			<></>
 		);
 	}
 
