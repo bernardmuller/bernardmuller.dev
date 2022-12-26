@@ -11,12 +11,9 @@ export default defineType({
 			type: "string",
 		}),
 		defineField({
-			name: "icon",
-			title: "icon",
-			type: "image",
-			options: {
-				hotspot: true,
-			},
+			name: "badge",
+			title: "Badge",
+			type: "string",
 		}),
 	],
 });

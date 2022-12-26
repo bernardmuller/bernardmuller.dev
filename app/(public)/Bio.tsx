@@ -14,9 +14,9 @@ const Bio = ({
 	console.log(image);
 	return (
 		<div className="flex justify-center w-full pt-16">
-			<div className="flex flex-col gap-6 w-full">
-				<div className="flex justify-between">
-					<div className="grid gap-2 w-[70%]">
+			<div className="flex gap-6 w-full">
+				<div className="flex flex-col-reverse gap-[3rem] items-center text-center md:flex-row md:gap-0 md:justify-between md:items-start md:text-left">
+					<div className="grid gap-2 md:w-[70%]">
 						<span className=" text-4xl">{greeting}</span>
 						<span className="text-grey_l">{bio}</span>
 					</div>
