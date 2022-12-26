@@ -51,7 +51,7 @@ export default async function HomePage() {
 		<div className="flex flex-col gap-[4rem] md:gap-6">
 			<Bio data={bio[0]} />
 			<Projects projects={projects} />
-			<Technologies data={tech} />
+			{/* <Technologies data={tech} /> */}
 		</div>
 	);
 }
