@@ -2,10 +2,14 @@ import { previewData } from "next/headers";
 import { groq } from "next-sanity";
 import { client } from "../../lib/sanity.client";
 import PreviewSuspense from "../../components/preview-suspense/PreviewSuspense";
-import Projects from "./Projects";
+// import Projects from "./Projects";
 import Image from "next/image";
-import Bio from "./Bio";
+
 import Technologies from "./Technologies";
+import Bio from "../../components/bio/Bio";
+import PreviewBio from "../../components/preview/preview-bio/PreviewBio";
+import PreviewProjects from "../../components/preview/preview-projects/PreviewProjects";
+import Projects from "../../components/projects/Projects";
 export const getAllProjectsQuery = groq`
 	*[_type == "project"] {
 		...,
@@ -25,10 +29,12 @@ export const getTechnologiesQuery = groq`
 	}
 `;
 
+export const revalidate = 60;
+
 export default async function HomePage() {
 	const projects = await client.fetch(getAllProjectsQuery);
 	const bio = await client.fetch(getBioQuery);
-	const tech = await client.fetch(getTechnologiesQuery);
+	// const tech = await client.fetch(getTechnologiesQuery);
 
 	if (previewData()) {
 		return (
@@ -40,8 +46,8 @@ export default async function HomePage() {
 				}
 			>
 				<div className="flex flex-col gap-6">
-					<Bio data={bio[0]} />
-					<Projects projects={projects} />
+					<PreviewBio query={getBioQuery} />
+					<PreviewProjects query={getAllProjectsQuery} />
 				</div>
 			</PreviewSuspense>
 		);
