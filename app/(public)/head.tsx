@@ -9,7 +9,9 @@ export default function Head() {
 				name="viewport"
 			/>
 			<NextSeo
-				title="Bernard Muller"
+				useAppDir={true}
+				themeColor="#CE7B91"
+				titleTemplate="Bernard Muller"
 				description="I am a proactive and passionate software engineer based in Cape Town."
 			/>
 			<link rel="icon" href="/favicon.ico" />

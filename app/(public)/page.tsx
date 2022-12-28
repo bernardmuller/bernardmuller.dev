@@ -10,6 +10,7 @@ import Bio from "../../components/bio/Bio";
 import PreviewBio from "../../components/preview/preview-bio/PreviewBio";
 import PreviewProjects from "../../components/preview/preview-projects/PreviewProjects";
 import Projects from "../../components/projects/Projects";
+import { NextSeo } from "next-seo";
 export const getAllProjectsQuery = groq`
 	*[_type == "project"] {
 		...,
