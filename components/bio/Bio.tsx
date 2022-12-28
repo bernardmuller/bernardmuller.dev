@@ -1,24 +1,37 @@
 import Image from "next/image";
 import React from "react";
 import urlFor from "../../lib/urlFor";
+import { PortableText } from "@portabletext/react";
+import { RichTextComponents } from "../rich-text/RichTextComponents";
 
 const Bio = ({
-	data: { greeting, image, bio },
+	data: { greeting, subgreeting, image, bio },
 }: {
 	data: {
 		greeting: string;
-		bio: string;
+		subgreeting: string;
+		bio: any;
 		image: any;
 	};
 }) => {
-	console.log(image);
 	return (
 		<div className="flex justify-center w-full pt-16">
 			<div className="flex gap-6 w-full">
-				<div className="flex flex-col-reverse gap-[3rem] items-center text-center md:flex-row md:gap-0 md:justify-between md:items-start md:text-left">
-					<div className="grid gap-2 md:w-[70%]">
-						<span className=" text-4xl">{greeting}</span>
-						<span className="text-grey_l">{bio}</span>
+				<div className="flex flex-col-reverse gap-[3rem] items-center text-center md:flex-row md:w-full md:gap-0 md:justify-between md:items-start md:text-left">
+					<div className="grid gap-2 md:w-[70%] text-grey_l">
+						<span className=" text-4xl text-white">{greeting}</span>
+						<span className=" text-grey_l">
+							{subgreeting?.split("Bernard")}
+							<strong className="text-red">
+								{subgreeting?.split(" ").find((word) => {
+									return word === "Bernard";
+								})}
+							</strong>
+						</span>
+						<PortableText
+							value={[...bio]}
+							components={RichTextComponents as any}
+						/>
 					</div>
 					<div className="grid">
 						{image && (

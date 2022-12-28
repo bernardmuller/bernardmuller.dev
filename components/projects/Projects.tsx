@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCard from "../../components/cards/project-card/ProjectCard";
+import ProjectCard from "../cards/project-card/ProjectCard";
 import { Project } from "../../types";
 
 const Projects = ({ projects }: { projects: Project[] }) => {

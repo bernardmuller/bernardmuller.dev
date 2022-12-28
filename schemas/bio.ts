@@ -11,9 +11,14 @@ export default defineType({
 			type: "string",
 		}),
 		defineField({
+			name: "subgreeting",
+			title: "Sub Greeting",
+			type: "string",
+		}),
+		defineField({
 			name: "bio",
 			title: "Bio",
-			type: "string",
+			type: "blockContent",
 		}),
 		defineField({
 			name: "image",
