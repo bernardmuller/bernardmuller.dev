@@ -10,6 +10,7 @@
     "@sanity/image-url": "^1.0.1",
     "@sanity/vision": "^3.0.0",
     "@tailwindcss/line-clamp": "^0.4.2",
+    "daisyui": "^2.46.0",
     "date-fns": "^2.29.3",
     "framer-motion": "^7.10.2",
     "next": "latest",
