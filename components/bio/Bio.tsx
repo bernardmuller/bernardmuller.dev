@@ -15,9 +15,9 @@ const Bio = ({
 	};
 }) => {
 	return (
-		<div className="flex justify-center w-full pt-16">
+		<div className="flex justify-center w-full pt-8 lg:pt-16">
 			<div className="flex gap-6 w-full">
-				<div className="flex flex-col-reverse gap-6 items-center text-center lg:flex-row lg:w-full lg:gap-0 lg:justify-between lg:items-start lg:text-left">
+				<div className="flex flex-col-reverse gap-12 items-center text-center lg:flex-row lg:w-full lg:gap-0 lg:justify-between lg:items-start lg:text-left">
 					<div className="grid gap-2 lg:w-[70%] text-grey_l">
 						<span className=" text-4xl text-white">{greeting}</span>
 						<span className=" text-grey_l">

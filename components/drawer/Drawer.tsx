@@ -8,10 +8,30 @@ const Drawer = ({ children }: { children: any }) => {
 	return (
 		<div className="drawer">
 			<input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-			<div className="drawer-content flex flex-col absolute w-full top-0">
+			<div className="drawer-content flex flex-col  w-full">
 				{/* <!-- Navbar --> */}
-				<div className="w-screen bg-black  ">
-					<div className="flex justify-between items-center w-full h-14 px-[17.5%] ">
+				<div className="w-full navbar bg-black lg:pl-[16%] lg:pr-[17%] ">
+					<div className="flex-none lg:hidden">
+						<label
+							htmlFor="my-drawer-3"
+							className="btn btn-square btn-ghost"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								className="inline-block w-6 h-6 stroke-current"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="M4 6h16M4 12h16M4 18h16"
+								></path>
+							</svg>
+						</label>
+					</div>
+					<div className="hidden lg:block flex-1 px-2 mx-2">
 						<Link href="/" className=" max-w-[120px]">
 							<div className="w-[50px] h-[50px] bg-red-500">
 								<Image
@@ -22,31 +42,52 @@ const Drawer = ({ children }: { children: any }) => {
 								/>
 							</div>
 						</Link>
-						<div className="flex justify-end h-full">
-							<ul className="flex justify-end gap-8 h-full items-center">
-								<li className=" h-5 text-grey_l flex items-center hover:border-b-2 hover:text-cus_white ">
-									<Link href="/about">about</Link>
-								</li>
-								<li className=" h-5 text-grey_l flex items-center hover:border-b-2  hover:text-cus_white">
-									<Link href="#project">projects</Link>
-								</li>
-								<li className=" h-5 text-grey_l flex items-center hover:border-b-2 hover:text-cus_white">
-									<Link href="#thoughts">thoughts</Link>
-								</li>
-								<li className=" h-5 text-grey_l flex items-center hover:border-b-2 hover:text-cus_white">
-									<Link href="#dashboard">dashboard</Link>
-								</li>
-							</ul>
-						</div>
+					</div>
+					<div className="flex-none hidden lg:block ">
+						<ul className="menu menu-horizontal">
+							{/* <!-- Navbar menu content here --> */}
+							<li>
+								<Link href="/about">about</Link>
+							</li>
+							<li>
+								<Link href="#project">projects</Link>
+							</li>
+							<li>
+								<Link href="#thoughts">thoughts</Link>
+							</li>
+							<li>
+								<Link href="#dashboard">dashboard</Link>
+							</li>
+						</ul>
 					</div>
 				</div>
 				{/* <!-- Page content here --> */}
 				{children}
 			</div>
-			<div className="drawer-side absolute h-screen top-0">
+			<div className="drawer-side h-screen top-0">
 				<label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-				<ul className="menu p-4 w-80 bg-base-100">
+				<ul className="menu p-2 w-80 bg-black_l">
 					{/* <!-- Sidebar content here --> */}
+					<div className="flex w-full justify-end lg:hidden ">
+						<label
+							htmlFor="my-drawer-3"
+							className="btn btn-square btn-ghost"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								className="inline-block w-6 h-6 stroke-current"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
+									d="M4 6h16M4 12h16M4 18h16"
+								></path>
+							</svg>
+						</label>
+					</div>
 					<li>
 						<a>Sidebar Item 1</a>
 					</li>
