@@ -7,7 +7,7 @@ const LinkButton: React.FC<LinkButton> = ({ url, label }) => {
 		<Link
 			href={url}
 			target="_blank"
-			className="text-cus_white border border-grey_light py-2 px-4 hover:bg-red-900/40"
+			className="text-cus_white border border-grey_l py-1.5 px-4 text-sm hover:bg-grey_d hover:text-white"
 		>
 			{label}
 		</Link>

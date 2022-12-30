@@ -17,7 +17,7 @@ const ProjectCard = ({ data }: { data: Project }) => {
 				<span className={`text-grey_l text-xs line-clamp-2`}>
 					{data.description}
 				</span>
-				<div className="flex gap-2 pt-2">
+				<div className="flex gap-2 pt-3">
 					{data.demo && <LinkButton url={data.demo} label="demo" />}
 					{data.repo && <LinkButton url={data.repo} label="source" />}
 				</div>
