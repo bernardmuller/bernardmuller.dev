@@ -17,7 +17,7 @@ const Bio = ({
 	return (
 		<div className="flex justify-center w-full pt-16">
 			<div className="flex gap-6 w-full">
-				<div className="flex flex-col-reverse gap-6 items-center text-center lg:flex-row lg:w-full lg:gap-0 lg:items-start lg:text-left">
+				<div className="flex flex-col-reverse gap-6 items-center text-center lg:flex-row lg:w-full lg:gap-4 lg:items-start lg:text-left">
 					<div className="grid">
 						{image && (
 							<div className="relative flex justify-center items-center h-64 w-56 p-2 bg-black_l">
